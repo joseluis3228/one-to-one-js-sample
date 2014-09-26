@@ -1,7 +1,11 @@
 # Sightcall JavaScript API examples 
 
 
-In this repository, you will find examples describing how to implement Sightcall Video.
+This is an example of a bare-bones sightcall installation
+
+For a full JavaScript API reference plese refer to our official documentation website : [http://docs.sightcall.com/js](http://docs.sightcall.com/js) and refer to our Github documentation:
+
+- [Quick-start RtccDriver and WebRTC](https://docs.sightcall.com/GD/01_javascript/01_jsquickstart.html)
 
 
 ### How to deploy the examples
@@ -61,23 +65,3 @@ Connected as Caller using (RtccDriver|WebRTC)
 
 >Warning: If using WebRTC, you will be ask to allow access to your microphone and camera when initiating a call and when accepting a call. Click ```Allow``` in order to give WebRTC access to these peripherics. 
 
-
-# Sightcall JavaScript API Documentation
-
-For a full JavaScript API reference plese refer to our official documentation website : [http://docs.sightcall.com/js](http://docs.sightcall.com/js) and refer to our Github documentation:
-
-- [Quick-start RtccDriver and WebRTC](https://docs.sightcall.com/GD/01_javascript/01_jsquickstart.html)
-
-## Hardware Requirements
-
-### Operating systems:
-* Windows XP SP3 <br/>
-* Windows 7 and 8<br/>
-* Mac OS 10.6, 10.7 and 10.8
-
-
-### Compatible browsers:
-* Chrome <br/>
-* Firefox <br/>
-* Safari 5 or later<br/>
-* IE9 or later
