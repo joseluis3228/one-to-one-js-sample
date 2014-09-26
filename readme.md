@@ -1,4 +1,4 @@
-# Sightcall JavaScript API examples 
+# Sightcall JavaScript One To One Sample 
 
 
 This is an example of a bare-bones sightcall installation
