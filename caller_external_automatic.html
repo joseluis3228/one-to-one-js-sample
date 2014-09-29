@@ -40,6 +40,7 @@
             // Because you are connecting as an external, you do not need a token. You just need the uid, of the person you wish to call.
             rtcc = {},
             script,
+						hasMadeCall = false,
             // Define the optional parameters
             options = {
                 debugLevel : 1,
@@ -68,8 +69,11 @@
                         realTimeClient = 'WebRTC';
                         break;
                     case 'sipOk':
-											rtcc.createCall('callee_uid', 'internal', 'Callee');
-                        document.getElementById('connecting').style.color = '#CCCCCC';
+												if (hasMadeCall=== false){
+													rtcc.createCall('callee_uid', 'internal', 'Callee');
+												hasMadeCAll = true;
+												}
+											  document.getElementById('connecting').style.color = '#CCCCCC';
                         document.getElementById('stat').innerHTML = 'Connected as Caller using ' + realTimeClient;
                         document.getElementById('buttonCall').style.display = 'block';
                         break;
