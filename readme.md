@@ -61,7 +61,7 @@ In the caller.html, you will be connected using caller_uid as a ```UID``` and  C
 
 #### How to use  
 
-this example is composed of four html files. Three of them called **caller*.html** and the other one named ```callee.html```. With all files a user called ```callee_uid```logged in the callee.html file connects and can be joined by a caller.  
+This example is composed of four html files. Three of them called ``caller*.html``` and the other one named ```callee.html```. With all files a user called ```callee_uid```logged in the callee.html file connects and can be joined by a caller.  
 In order to initiate a call between these two pages here a the steps you have to follow:
 
 - Open ```callee.html``` in one computer and wait te be connected. You will know that you are connected when you will see these sentences appear in your browswer:
@@ -90,4 +90,6 @@ The behaviour of the external in the example is exactly the same as before. Plea
 
 #### Managing auto-start calls
 
-The last case is pretty much the same except that the caller will automatically call when the connected to the cloud. It is availbale through the ```caller_external_automatic.html```. Automatic calls can be done either with internal or external users. Please note that the call starts when the caller page receives the ```sipOK```notification and that the call has not been done yet. That notification is regularly sent to the application to keep it informed that the client is still connected the RTCC cloud and can be reached.
+The last case is pretty much the same except that the caller will automatically call when the connected to the cloud. It is availbale through the ```caller_external_automatic.html```. Automatic calls can be done either with internal or external users. 
+
+>Warning: Please note that the call starts when the caller page receives the ```sipOK```notification and that the call has not been done yet. That notification is regularly sent to the application to keep it informed that the client is still connected the RTCC cloud and can be reached.
