@@ -3,7 +3,7 @@
 
 This is an example of a bare-bones sightcall installation
 
-For a full JavaScript API reference plese refer to our official documentation website : [http://docs.sightcall.com/js](http://docs.sightcall.com/js) and refer to our Github documentation:
+For a full JavaScript API reference please refer to our official documentation website : [http://docs.sightcall.com/js](http://docs.sightcall.com/js)
 
 - [Quick-start RtccDriver and WebRTC](https://docs.sightcall.com/GD/01_javascript/01_jsquickstart.html)
 
