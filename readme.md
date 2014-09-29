@@ -35,19 +35,17 @@ and
 var rtcc = new Rtcc("YOUR_APP_IDENTIFIER", "callee_uid", "internal", options);
 ```
 
-You also need to replace the following line:
+You also need to replace the following line if you are using our java, node.js or ruby Authentication API Client sample:
 
 ```
 //AUTH_URL = 'http://YOUR_AUTH_URL/gettoken?uid=',
 ```
-if you are using our java, node.js or ruby Authentication API Client sample or
+ or if you are using our PHP Authentication API Client Sample.
 
 ```
 // AUTH_URL = 'http://YOUR_AUTH_URL/gettoken.php?uid=',
 
 ```
-if you are using our PHP Authentication API Client Sample.
-
 In any case, you have to uncomment the right line and specify the URL where a token can be found by the web page.
 Of course, if you have implemented your own client parameters and URL might be different and you need to update the samples accordingly.
 
