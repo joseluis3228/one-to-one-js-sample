@@ -92,4 +92,8 @@ The behaviour of the external in the example is exactly the same as before. Plea
 
 The last case is pretty much the same except that the caller will automatically call when the connected to the cloud. It is availbale through the ```caller_external_automatic.html```. Automatic calls can be done either with internal or external users. 
 
->Warning: Please note that the call starts when the caller page receives the ```sipOK```notification and that the call has not been done yet. That notification is regularly sent to the application to keep it informed that the client is still connected the RTCC cloud and can be reached.
+- First connect as the callee
+
+- Then Launch the automatic external page. The external user connects to the cloud and then automatically starts a call to the callee page.
+
+>Warning: Please remember that the JS API sends a ```sipOK``` notification on the ```onConnectionHandler``` callback when the user is ready to make or receive calls. It is then send again every 15 minutes to notify the application that the user is still connected. The automatic call in the example is initiated by the ```sipOK``` connection handler, if and only if, the call has not been started yet. Without that check, the application could restart a call each time the ```sipOK``` notification is sent. 
