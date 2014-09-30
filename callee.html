@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>My Rtcc Application: Callee</title>
-    <script type="text/javascript" src="http://download.rtccloud.net/js/webappid/uoz1bzvbpim5"></script>
+    <script type="text/javascript" src="http://download.rtccloud.net/js/webappid/YOUR_APP_IDENTIFIER"></script>
 <style type="text/css">
     body {
         font-family: Helvetica;
@@ -41,7 +41,7 @@
             // AUTH_URL = 'http://YOUR_AUTH_URL/gettoken?uid=',
             // If you are using our PHP server-SDK uncomment the following line and replace the placeholder YOUR_AUTH_URL wuth your authentication client url
             // AUTH_URL = 'http://YOUR_AUTH_URL/gettoken.php?uid=',
- 
+
             realTimeClient = '',
             rtcc = {},
             script,
@@ -54,7 +54,7 @@
             //Intialize Rtcc Function
             initializeRtcc = function (token) {
                 // Initialize the Main Object with App Identifier, Token, RtccType, options
-                rtcc = new Rtcc('uoz1bzvbpim5', token, 'internal', options);
+                rtcc = new Rtcc('YOUR_APP_IDENTIFIER', token, 'internal', options);
                 // Call if the RtccDriver is not running on the client computer and if the browser is not WebRTC-capable
                 rtcc.onRtccDriverNotStarted = function (downloadUrl) {
                     var answer = confirm('Click OK to download and install the Rtcc client.');
