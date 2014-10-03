@@ -77,7 +77,10 @@
                         break;
                     case 'loggedasotheruser':
                         // force connection, kick other logged users
-                        rtcc.authenticate(1);
+                         getToken(UID_USER, function (token){
+                            rtcc.setToken(token);
+                            rtcc.authenticate(1);
+                        });
                         break;
                     }
                 };
@@ -96,7 +99,7 @@
                 //Initialize connection between the real-time client and the browser
                 rtcc.initialize();
             },
-            getToken = function (uid) {
+             getToken = function (uid, callback) {
                 var xhr;
                 if (window.XMLHttpRequest) { // code for IE7+, Firefox, Chrome, Opera, Safari
                     xhr = new XMLHttpRequest();
@@ -111,6 +114,7 @@
                         response = xhr.responseText;
                         try {
                             responseJson = JSON.parse(response);
+
                         } catch (e) {
                             document.getElementById('error-content').innerHTML = e.message + '<br />' + e.stack + '<br />Response: ' + response;
                             document.getElementById('error').style.display = 'block';
@@ -120,7 +124,11 @@
                             document.getElementById('error').style.display = 'block';
                         } else {
                             token = responseJson.token;
-                            initializeRtcc(token);
+                            if (typeof callback === "function"){
+                                callback(token)
+                            }else{
+                                initializeRtcc(token);
+                            }
                         }
                     } else if (xhr.readyState === 4 && xhr.status !== 200) {
                         response = xhr.responseText;
