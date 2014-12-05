@@ -86,14 +86,12 @@
                 };
                 // This function permits to catch events comming from the call
                 rtcc.onCallHandler = function (callObj, args) {
-                    if (args.type === 'call' && args.status === 'active') {
-                        document.getElementById('call').innerHTML = 'Call active';
-                    } else if (args.type === 'call' && args.status === 'terminated') {
-                        document.getElementById('call').innerHTML = 'Waiting for a call';
-                    } else if (args.type === 'webRTCcall' && args.status === 'active') {
-                        document.getElementById('call').innerHTML = 'Call active';
-                    } else if (args.type === 'webRTCcall' && args.status === 'terminated') {
-                        document.getElementById('call').innerHTML = 'Waiting for a call';
+                    if (args.type === 'call' || args.type === 'webRTCcall'){
+                        if (args.status === 'active') {
+                            document.getElementById('call').innerHTML = 'Call active';
+                        } else if (args.status === 'terminated') {
+                            document.getElementById('call').innerHTML = 'Waiting for a call';
+                        }
                     }
                 };
                 //Initialize connection between the real-time client and the browser
