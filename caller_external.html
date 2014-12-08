@@ -42,10 +42,7 @@
             script,
             // Define the optional parameters
             options = {
-                debugLevel : 1,
                 displayName : 'Caller',
-                defaultStyle: true,
-                legacy: false,
                 container : 'video-container'
             },
             //Intialize Rtcc Function
@@ -80,18 +77,14 @@
                 };
                 // This function permits to catch events comming from the call
                 rtcc.onCallHandler = function (callObj, args) {
-                    if (args.type === 'call' && args.status === 'callCreated') {
-                        document.getElementById('call').innerHTML = 'Calling...';
-                    } else if (args.type === 'call' && args.status === 'active') {
-                        document.getElementById('call').innerHTML = 'Call active';
-                    } else if (args.type === 'call' && args.status === 'terminated') {
-                        document.getElementById('call').innerHTML = '';
-                    } else if (args.type === 'webRTCcall' && args.status === 'callCreated') {
-                        document.getElementById('call').innerHTML = 'Calling...';
-                    } else if (args.type === 'webRTCcall' && args.status === 'active') {
-                        document.getElementById('call').innerHTML = 'Call active';
-                    } else if (args.type === 'webRTCcall' && args.status === 'terminated') {
-                        document.getElementById('call').innerHTML = '';
+                    if (args.type === 'call' || args.type === 'webRTCcall'){
+                        if (args.status === 'callCreated') {
+                            document.getElementById('call').innerHTML = 'Calling...';
+                        } else if (args.status === 'active') {
+                            document.getElementById('call').innerHTML = 'Call active';
+                        } else if (args.status === 'terminated') {
+                            document.getElementById('call').innerHTML = '';
+                        }
                     }
                 };
                 //Initialize connection between the real-time client and the browser
