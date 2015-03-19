@@ -85,7 +85,7 @@ Connected as Caller using (RtccDriver|WebRTC)
 
 #### Managing an external caller
 
-If you wish to use external users, instead of using the page ```caller.html```, just use the page ```caller_external.html```. In that case, the caller is not an authentified user but an external one, attached to the premium user callee_uid, and only allowed to call that premium user.  
+If you wish to use external users, instead of using the page ```caller.html```, just use the page ```caller_external.html```. In that case, the caller is not an authentified user but an external one, attached to the premium_plus or premium_recording_plus user callee_uid, and only allowed to call that premium_plus or premium_recording_plus user.  
 The behaviour of the external in the example is exactly the same as before. Please note that you have a limited number of external calls allowed.
 
 #### Managing auto-start calls
